@@ -32,6 +32,7 @@ natlangdev/
 │   ├── fastapi/    # FastAPI (Python) guidelines
 │   └── pytorch/    # PyTorch (Python) guidelines
 ├── patterns/       # Cross-language design patterns
+├── workflows/      # Development workflows
 └── vscode/         # VS Code configurations
 ```
 
@@ -72,6 +73,10 @@ natlangdev/
 - **[Feature-Sliced Hexagonal Architecture](patterns/FEATURE_SLICED_HEXAGONAL.md)** — The definitive pattern for parallel AI agent swarm development in a monorepo
 - **[Minimal Dependencies](patterns/MINIMAL_DEPENDENCIES.md)** — Philosophy on when to use vs. avoid libraries
 - **[Code Comments](patterns/COMMENTS.md)** — Inline, concise, and descriptive commenting guidelines
+
+## Workflows
+
+- **[Lisa Flow](workflows/LISA_FLOW.md)** — Structured AI development with automatic TDD and self-healing tests
 
 ## VS Code
 
