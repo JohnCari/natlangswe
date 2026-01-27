@@ -87,6 +87,8 @@ natlangdev/
 - **[Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** — Run Claude Code directly in VS Code
 - **[Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)** — Inline error/warning highlighting for quick review
 
+Other extensions vary by project — ask Claude Code for recommendations based on your stack.
+
 ## Contributing
 
 Contributions welcome! Feel free to submit guidelines for additional languages or improvements to existing ones.
