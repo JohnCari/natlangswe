@@ -62,7 +62,7 @@ natlangdev/
 
 ### FastAPI (Python)
 
-*Coming soon*
+- **[Power of 10 Rules for FastAPI](frameworks/fastapi/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for FastAPI
 
 ### PyTorch (Python)
 
