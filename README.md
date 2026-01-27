@@ -82,16 +82,6 @@ natlangdev/
 
 *Coming soon — Recommended settings, extensions, and keybindings*
 
-## Usage
-
-Copy the relevant guidelines into your AI assistant's context:
-
-### Claude Code
-Add to your project's `CLAUDE.md` file or reference directly in prompts.
-
-### Other Tools
-Include the guideline content in your system prompt or context window.
-
 ## Contributing
 
 Contributions welcome! Feel free to submit guidelines for additional languages or improvements to existing ones.
