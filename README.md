@@ -69,7 +69,7 @@ natlangdev/
 
 ## Patterns
 
-*Coming soon — Cross-language best practices for error handling, testing, security*
+- **[Minimal Dependencies](patterns/MINIMAL_DEPENDENCIES.md)** — Philosophy on when to use vs. avoid libraries
 
 ## VS Code
 
