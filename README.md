@@ -66,7 +66,7 @@ natlangdev/
 
 ### PyTorch (Python)
 
-*Coming soon*
+- **[Power of 10 Rules for PyTorch](frameworks/pytorch/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for PyTorch
 
 ## Patterns
 
