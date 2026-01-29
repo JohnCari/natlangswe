@@ -1,6 +1,6 @@
 # NextJS Monorepo Preferences
 
-> Optimized defaults for NextJS monorepo development
+> Optimized defaults for NextJS monorepo development on Vercel
 
 ## Core Stack
 
@@ -10,6 +10,17 @@
 | **Bun** | Package manager + runtime |
 | **Turbopack** | Dev bundler (default in Next.js) |
 | **Turborepo** | Monorepo orchestration |
+| **Vercel** | Hosting + CI/CD |
+
+## Package Manager Config
+
+Ensure Vercel CI uses Bun by specifying in root `package.json`:
+
+```json
+{
+  "packageManager": "bun@1.1.0"
+}
+```
 
 ## Server Components
 
@@ -28,6 +39,22 @@
 - Browser APIs (localStorage, window)
 - Real-time updates
 - Animations and transitions
+
+### Prevent Code Leakage
+
+Install boundary packages:
+```bash
+bun add server-only client-only
+```
+
+Use in server-only files:
+```tsx
+import 'server-only'  // Build error if imported client-side
+
+export async function getSecretData() {
+  // This code can never leak to the client
+}
+```
 
 ### Client Boundary Placement
 
@@ -61,10 +88,53 @@ export default function Page() { ... }
 </ServerLayout>
 ```
 
+### Container/Presentational Pattern
+
+Keep data-fetching on the server, pass to presentational client components:
+
+```tsx
+// ProductContainer.tsx (Server Component)
+export async function ProductContainer({ id }: { id: string }) {
+  const product = await db.product.find(id)  // Never ships to browser
+  return <ProductCard product={product} />   // Client presentational
+}
+```
+
+### Streaming with Suspense
+
+Always wrap async components or use `loading.tsx` for streaming:
+
+```tsx
+// app/dashboard/loading.tsx
+export default function Loading() {
+  return <DashboardSkeleton />
+}
+
+// Or use Suspense directly
+<Suspense fallback={<Skeleton />}>
+  <AsyncComponent />
+</Suspense>
+```
+
+Without Suspense boundaries, React treats the entire app as one chunk.
+
+## Edge Runtime
+
+For latency-sensitive routes, use Edge Runtime:
+
+```tsx
+// app/api/fast/route.ts
+export const runtime = 'edge'
+
+export async function GET() {
+  return Response.json({ fast: true })
+}
+```
+
 ## Tooling
 
 ### Biome (Recommended)
-Faster linter + formatter than ESLint + Prettier combined.
+Faster linter + formatter than ESLint + Prettier combined (10-20x faster).
 
 ```bash
 bun add -D @biomejs/biome
@@ -72,7 +142,7 @@ bunx biome init
 ```
 
 ### Turborepo Remote Caching
-Cache build artifacts across CI runs. Free on Vercel.
+Free and automatic on Vercel. Enable with:
 
 ```bash
 bunx turbo login
@@ -91,7 +161,7 @@ my-monorepo/
 │   ├── typescript-config/   # Shared tsconfig.json
 │   └── biome-config/        # Shared Biome config
 ├── turbo.json
-├── package.json
+├── package.json             # Include "packageManager": "bun@1.1.0"
 └── bun.lockb
 ```
 
@@ -115,3 +185,4 @@ bun dev
 - [Turborepo + Next.js Guide](https://turborepo.dev/docs/guides/frameworks/nextjs)
 - [Biome Documentation](https://biomejs.dev/guides/getting-started/)
 - [Bun-powered Turborepo Starter](https://github.com/gmickel/turborepo-shadcn-nextjs)
+- [React Server Components Patterns](https://www.patterns.dev/react/react-server-components/)
