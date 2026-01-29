@@ -1,33 +1,56 @@
 # NatLangDev
 
-> Coding in "Natural Language" — Prevent vibe coding with structured AI prompts
+> A Natural Language Software Developer — Best practices for AI-assisted development to prevent vibe coding
 
 ## What is NatLangDev?
 
-**NatLangDev** (Natural Language Developer Guide) is a collection of curated guidelines that help developers communicate effectively with AI coding assistants like Claude Code.
+**NatLangDev** stands for **Natural Language Software Developer** — a discipline for writing software through structured communication with AI coding assistants.
+
+Natural Language Software Development is the practice of directing AI assistants like Claude Code using explicit, well-defined guidelines rather than ad-hoc prompts. This repository teaches the best practices for this emerging development paradigm.
+
+## Why NatLangDev?
 
 ### The Problem: Vibe Coding
 
 "Vibe coding" happens when developers prompt AI assistants without clear constraints or standards, resulting in:
+
 - Inconsistent code quality
 - Security vulnerabilities
 - Poor architectural decisions
 - Code that "works" but violates best practices
+- Technical debt that compounds with each generation
 
-### The Solution: Structured Guidelines
+### The Solution: Structured Natural Language Development
 
-Instead of vague prompts like *"write me a web server"*, NatLangDev provides explicit rules that AI assistants follow. By adding these guidelines to your AI's context, you get code that adheres to proven standards — whether that's NASA's safety-critical rules, idiomatic language patterns, or framework-specific conventions.
+Instead of vague prompts like *"write me a web server"*, Natural Language Software Development provides explicit rules that AI assistants follow. By adding these guidelines to your AI's context, you get code that adheres to proven standards — whether that's NASA's safety-critical rules, idiomatic language patterns, or framework-specific conventions.
 
-## Structure
+## How to Use
+
+1. **Choose your guidelines** — Select the language, framework, and pattern guidelines relevant to your project
+2. **Add to AI context** — Include the guideline files in your AI assistant's context (e.g., via CLAUDE.md, system prompts, or project files)
+3. **Develop with structure** — Your AI assistant will now follow these best practices in all generated code
+
+### Example
+
+To use Rust guidelines with Claude Code, add to your `CLAUDE.md`:
+
+```markdown
+Follow the guidelines in:
+- /path/to/NatLangDev/languages/rust/POWER_OF_10.md
+- /path/to/NatLangDev/patterns/MINIMAL_DEPENDENCIES.md
+```
+
+## Repository Structure
 
 ```
-natlangdev/
+NatLangDev/
 ├── languages/
 │   ├── rust/       # Rust guidelines
 │   ├── python/     # Python guidelines
 │   └── typescript/ # TypeScript guidelines
 ├── frameworks/
 │   ├── nextjs/     # NextJS (TSX) guidelines
+│   ├── react/      # React (TSX) guidelines
 │   ├── axum/       # Rust Axum guidelines
 │   ├── fastapi/    # FastAPI (Python) guidelines
 │   └── pytorch/    # PyTorch (Python) guidelines
@@ -37,63 +60,73 @@ natlangdev/
 └── vscode/         # VS Code configurations
 ```
 
-## Languages
+---
 
-### Rust
+## Guidelines
+
+### Languages
+
+#### Rust
 
 - **[Power of 10 Rules for Rust](languages/rust/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for Rust
 
-### Python
+#### Python
 
 - **[Power of 10 Rules for Python](languages/python/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for Python
 
-### TypeScript
+#### TypeScript
 
 - **[Power of 10 Rules for TypeScript](languages/typescript/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for TypeScript
 
-## Frameworks
+### Frameworks
 
-### NextJS (TSX)
+#### NextJS (TSX)
 
 - **[Power of 10 Rules for NextJS](frameworks/nextjs/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for NextJS
 - **[Monorepo Preferences](frameworks/nextjs/PREFERENCES.md)** — Bun + Turborepo + Turbopack + RSC guidelines
 
-### Axum (Rust)
+#### React (TSX)
+
+- **[Power of 10 Rules for React](frameworks/react/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for client-side React
+
+#### Axum (Rust)
 
 - **[Power of 10 Rules for Axum](frameworks/axum/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for Axum
 
-### FastAPI (Python)
+#### FastAPI (Python)
 
 - **[Power of 10 Rules for FastAPI](frameworks/fastapi/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for FastAPI
 
-### PyTorch (Python)
+#### PyTorch (Python)
 
 - **[Power of 10 Rules for PyTorch](frameworks/pytorch/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for PyTorch
 
-## Patterns
+### Patterns
 
 - **[Feature-Sliced Hexagonal Architecture](patterns/FEATURE_SLICED_HEXAGONAL.md)** — The definitive pattern for parallel AI agent swarm development in a monorepo
 - **[Minimal Dependencies](patterns/MINIMAL_DEPENDENCIES.md)** — Philosophy on when to use vs. avoid libraries
 - **[Code Comments](patterns/COMMENTS.md)** — Inline, concise, and descriptive commenting guidelines
 
-## Workflows
+### Workflows
 
 - **[Lisa Flow](workflows/LISA_FLOW.md)** — Structured AI development with automatic TDD and self-healing tests
 
-## Stacks
+### Stacks
 
 - **[FastMVP](stacks/fastmvp/README.md)** — Vercel + NextJS + Convex/Supabase + Clerk + Stripe for rapid MVP development
 
-## VS Code
+### VS Code
 
 - **[Review & Orchestration Mode](vscode/configuration/settings.json)** — VS Code settings optimized for reviewing AI-generated code (disables autocomplete, strips UI bloat, enhances diff view)
 
-### Recommended Extensions
+#### Recommended Extensions
 
 - **[Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** — Run Claude Code directly in VS Code
 - **[Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)** — Inline error/warning highlighting for quick review
 
 Other extensions vary by project — ask Claude Code for recommendations based on your stack.
+
+---
 
 ## Contributing
 
@@ -102,4 +135,3 @@ Contributions welcome! Feel free to submit guidelines for additional languages o
 ## License
 
 CC0 1.0 Universal — Public Domain
-
