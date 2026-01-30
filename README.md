@@ -64,67 +64,47 @@ NatLangDev/
 
 ## Guidelines
 
-### Languages
+### Power of 10 Rules
 
-#### Rust
+NASA JPL's safety-critical coding rules adapted for modern development.
 
-- **[Power of 10 Rules for Rust](languages/rust/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for Rust
+| Language | Guidelines |
+|----------|------------|
+| Rust | [POWER_OF_10.md](languages/rust/POWER_OF_10.md) |
+| Python | [POWER_OF_10.md](languages/python/POWER_OF_10.md) |
+| TypeScript | [POWER_OF_10.md](languages/typescript/POWER_OF_10.md) |
 
-#### Python
-
-- **[Power of 10 Rules for Python](languages/python/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for Python
-
-#### TypeScript
-
-- **[Power of 10 Rules for TypeScript](languages/typescript/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for TypeScript
-
-### Frameworks
-
-#### NextJS (TSX)
-
-- **[Power of 10 Rules for NextJS](frameworks/nextjs/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for NextJS
-- **[Monorepo Preferences](frameworks/nextjs/PREFERENCES.md)** — Bun + Turborepo + Turbopack + RSC guidelines
-
-#### React (TSX)
-
-- **[Power of 10 Rules for React](frameworks/react/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for client-side React
-
-#### Axum (Rust)
-
-- **[Power of 10 Rules for Axum](frameworks/axum/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for Axum
-
-#### FastAPI (Python)
-
-- **[Power of 10 Rules for FastAPI](frameworks/fastapi/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for FastAPI
-
-#### PyTorch (Python)
-
-- **[Power of 10 Rules for PyTorch](frameworks/pytorch/POWER_OF_10.md)** — NASA JPL's safety-critical coding guidelines adapted for PyTorch
+| Framework | Guidelines |
+|-----------|------------|
+| React | [POWER_OF_10.md](frameworks/react/POWER_OF_10.md) |
+| NextJS | [POWER_OF_10.md](frameworks/nextjs/POWER_OF_10.md) ・ [PREFERENCES.md](frameworks/nextjs/PREFERENCES.md) |
+| Axum | [POWER_OF_10.md](frameworks/axum/POWER_OF_10.md) |
+| FastAPI | [POWER_OF_10.md](frameworks/fastapi/POWER_OF_10.md) |
+| PyTorch | [POWER_OF_10.md](frameworks/pytorch/POWER_OF_10.md) |
 
 ### Patterns
 
-- **[Feature-Sliced Hexagonal Architecture](patterns/FEATURE_SLICED_HEXAGONAL.md)** — The definitive pattern for parallel AI agent swarm development in a monorepo
-- **[Minimal Dependencies](patterns/MINIMAL_DEPENDENCIES.md)** — Philosophy on when to use vs. avoid libraries
-- **[Code Comments](patterns/COMMENTS.md)** — Inline, concise, and descriptive commenting guidelines
+- [Feature-Sliced Hexagonal](patterns/FEATURE_SLICED_HEXAGONAL.md) — AI agent swarm development in monorepos
+- [Minimal Dependencies](patterns/MINIMAL_DEPENDENCIES.md) — When to use vs. avoid libraries
+- [Code Comments](patterns/COMMENTS.md) — Inline, concise commenting guidelines
 
 ### Workflows
 
-- **[Lisa Flow](workflows/LISA_FLOW.md)** — Structured AI development with automatic TDD and self-healing tests
+- [Lisa Flow](workflows/LISA_FLOW.md) — Structured AI development with TDD
 
 ### Stacks
 
-- **[FastMVP](stacks/fastmvp/README.md)** — Vercel + NextJS + Convex/Supabase + Clerk + Stripe for rapid MVP development
+- [FastMVP](stacks/fastmvp/README.md) — Vercel + NextJS + Convex/Supabase + Clerk + Stripe
+
+---
+
+## Tooling
 
 ### VS Code
 
-- **[Review & Orchestration Mode](vscode/configuration/settings.json)** — VS Code settings optimized for reviewing AI-generated code (disables autocomplete, strips UI bloat, enhances diff view)
+- [Review & Orchestration Mode](vscode/configuration/settings.json) — Settings optimized for reviewing AI-generated code
 
-#### Recommended Extensions
-
-- **[Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** — Run Claude Code directly in VS Code
-- **[Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)** — Inline error/warning highlighting for quick review
-
-Other extensions vary by project — ask Claude Code for recommendations based on your stack.
+**Recommended Extensions:** [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) ・ [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 
 ---
 
