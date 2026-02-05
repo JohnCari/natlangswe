@@ -1,14 +1,14 @@
-# NatLangDev
+# NatLangSWE
 
 > A Natural Language Software Developer — Best practices for AI-assisted development to prevent vibe coding
 
-## What is NatLangDev?
+## What is NatLangSWE?
 
-**NatLangDev** stands for **Natural Language Software Developer** — a discipline for writing software through structured communication with AI coding assistants.
+**NatLangSWE** stands for **Natural Language Software Engineer** — a discipline for writing software through structured communication with AI coding assistants.
 
 Natural Language Software Development is the practice of directing AI assistants like Claude Code using explicit, well-defined guidelines rather than ad-hoc prompts. This repository teaches the best practices for this emerging development paradigm.
 
-## Why NatLangDev?
+## Why NatLangSWE?
 
 ### The Problem: Vibe Coding
 
@@ -36,14 +36,14 @@ To use Rust guidelines with Claude Code, add to your `CLAUDE.md`:
 
 ```markdown
 Follow the guidelines in:
-- /path/to/NatLangDev/languages/rust/POWER_OF_10.md
-- /path/to/NatLangDev/patterns/MINIMAL_DEPENDENCIES.md
+- /path/to/NatLangSWE/languages/rust/POWER_OF_10.md
+- /path/to/NatLangSWE/patterns/MINIMAL_DEPENDENCIES.md
 ```
 
 ## Repository Structure
 
 ```
-NatLangDev/
+NatLangSWE/
 ├── languages/
 │   ├── rust/       # Rust guidelines
 │   ├── python/     # Python guidelines
