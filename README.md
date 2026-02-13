@@ -24,21 +24,41 @@ Natural Language Software Development is the practice of directing AI assistants
 
 Instead of vague prompts like *"write me a web server"*, Natural Language Software Development provides explicit rules that AI assistants follow. By adding these guidelines to your AI's context, you get code that adheres to proven standards — whether that's NASA's safety-critical rules, idiomatic language patterns, or framework-specific conventions.
 
-## How to Use
+## How to Use with Claude Code
 
-1. **Choose your guidelines** — Select the language, framework, and pattern guidelines relevant to your project
-2. **Add to AI context** — Include the guideline files in your AI assistant's context (e.g., via CLAUDE.md, system prompts, or project files)
-3. **Develop with structure** — Your AI assistant will now follow these best practices in all generated code
+1. **Clone natlangswe** into your project (or as a sibling directory):
+   ```bash
+   cd your-project
+   git clone https://github.com/NatLangSWE/natlangswe.git natlangswe
+   ```
+2. **Delete what you don't need** — Remove the files and folders that aren't relevant to your stack (e.g., delete `frameworks/pytorch/` if you're not using PyTorch)
+3. **Create a `CLAUDE.md`** in your project root
+4. **Reference the remaining files** in your `CLAUDE.md` so Claude Code reads them before writing code
 
-### Example
+### Example `CLAUDE.md`
 
-To use Rust guidelines with Claude Code, add to your `CLAUDE.md`:
+For a SvelteKit + TypeScript + Bun + PostgreSQL project:
 
 ```markdown
-Follow the guidelines in:
-- /path/to/NatLangSWE/languages/rust/POWER_OF_10.md
-- /path/to/NatLangSWE/patterns/MINIMAL_DEPENDENCIES.md
+# Coding Standards
+
+Read the relevant natlangswe/ files before writing code.
+
+## Reference Files
+
+- natlangswe/languages/typescript/POWER_OF_10.md
+- natlangswe/frameworks/sveltekit/POWER_OF_10.md
+- natlangswe/frameworks/svelte5-runes/POWER_OF_10.md
+- natlangswe/frameworks/tailwindcss/POWER_OF_10.md
+- natlangswe/databases/postgresql/POWER_OF_10.md
+- natlangswe/toolchains/bun/POWER_OF_10.md
+- natlangswe/frameworks/sveltekit/PREFERENCES.md
+- natlangswe/patterns/COMMENTS.md
+- natlangswe/patterns/MINIMAL_DEPENDENCIES.md
+- natlangswe/patterns/FEATURE_SLICED_DESIGN.md
 ```
+
+See [stacks/svelteship/CLAUDE.md](stacks/svelteship/CLAUDE.md) for a full working example.
 
 ## Repository Structure
 
@@ -65,7 +85,6 @@ NatLangSWE/
 │   ├── bun/            # Bun (TypeScript toolchain) guidelines
 │   └── cargo-rustup/   # Cargo + Rustup (Rust toolchain) guidelines
 ├── patterns/       # Cross-language design patterns
-├── workflows/      # Development workflows
 ├── stacks/         # Recommended tech stacks
 ```
 
@@ -107,13 +126,9 @@ NASA JPL's safety-critical coding rules adapted for modern development.
 
 ### Patterns
 
-- [Feature-Sliced Hexagonal](patterns/FEATURE_SLICED_HEXAGONAL.md) — AI agent swarm development in monorepos
+- [Feature-Sliced Design](patterns/FEATURE_SLICED_DESIGN.md) — Monorepo architecture with strict layers
 - [Minimal Dependencies](patterns/MINIMAL_DEPENDENCIES.md) — When to use vs. avoid libraries
 - [Code Comments](patterns/COMMENTS.md) — Inline, concise commenting guidelines
-
-### Workflows
-
-- [Maestro-Framework](https://github.com/JohnCari/maestro-framework) — Structured AI development with TDD
 
 ### Stacks
 
